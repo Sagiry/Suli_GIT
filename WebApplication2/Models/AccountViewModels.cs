@@ -63,7 +63,28 @@ namespace WebApplication2.Models
     }
 
     public class RegisterViewModel
-    {
+    { 
+
+        [Required]
+        [Display(Name = "OM-Code")]
+        public string OMCode { get; set; }
+
+        [Required]
+        [Display(Name = "Birth date")]
+        public string BirthDate { get; set; }
+
+        [Required]
+        [Display(Name = "Sex")]
+        public string Sex { get; set; }
+
+        [Required]
+        [Display(Name = "First name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Surname")]
+        public string Surname { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
