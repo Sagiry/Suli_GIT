@@ -91,6 +91,21 @@ namespace WebApplication2.Models
         public string Email { get; set; }
 
         [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Vezetékneved:")]
+        public string FName { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Keresztneved:")]
+        public string LName { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "OM-kódod:")]
+        public string OMcode { get; set; }
+
+        [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
