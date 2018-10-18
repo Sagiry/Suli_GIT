@@ -1,5 +1,6 @@
 
-body { background-image: url("/Content/kepek/backg.jpg");;
+body { 
+    background-image: url("/Content/kepek/backg.jpg");
 	font-family: Franklin Gothic;
     font-size: 20px;
     color: black;
@@ -125,6 +126,7 @@ header{
 .container{
 	position:absolute;
 	left: 0;
-	top:25%;
+	top:50vh;
 	width: 100%;	
+    transform: translateY(-50%);
 }
