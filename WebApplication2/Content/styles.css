@@ -86,7 +86,7 @@ body {font-family: "Lato", sans-serif;}
     display: table;
 }
 
-div {
+.keret {
 	background:transparent ;
 	border-radius: 20px;
 	background:rgba(0, 0, 0, .2) ;
@@ -121,3 +121,6 @@ header{
 	background:rgba(0, 0, 0, .1) ;
 }
 
+h3 {
+    font-size:20px
+}
