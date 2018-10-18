@@ -1,7 +1,6 @@
 
 body { background-image: url("kepek/backg.jpg");
 	font-family: Franklin Gothic;
-    font-size: 20px;
     color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -98,7 +97,7 @@ h2{
 }
 
 h4{
-	font-size: 40px;
+	font-size: 10px;
 }
 
 .right{
@@ -122,10 +121,3 @@ header{
 	background:rgba(0, 0, 0, .1) ;
 }
 
-.container{
-	position:absolute;
-	left: 0;
-	top:50vh;
-	width: 100%;	
-    transform: translateY(-50%);
-}

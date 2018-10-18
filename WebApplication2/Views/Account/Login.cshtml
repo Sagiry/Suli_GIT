@@ -1,56 +1,44 @@
 ﻿@using WebApplication2.Models
 @model LoginViewModel
-@{
-    ViewBag.Title = "Üdvözlünk a Gépész Informatika Tantárában - GIT";
-}
+    @{
+        ViewBag.Title = "Üdvözlünk a Gépész Informatika Tantárában - GIT";
+    }
 
-<center><h2>@ViewBag.Title.</h2></center>
-<div class="row">
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+
     <center>
-    <div class="container">
-       
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-
+        <div class="container">
+            <form action="action_page.php">
                 @Html.AntiForgeryToken()
-                <center><h4>Ha még nem használtad a felületet, kérünk, regisztrálj!</h4></center>
-           
+                <h1>Üdvözlünk a Gépész Informatika Tantárában - GIT:</h1>
+                <p><h3>Ha még nem használtad a felületet, kérünk, regisztrálj!</h3></p>
+                <img src="~/Content/kepek/logo.png" alt="" width="200" height="200">
+
+
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                   
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Gmail-emailcímed" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                  
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Jelszavad"  })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Bejelentkezés" class="btn btn-default" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Regisztráció" class="btn btn-default" />
-                    </div>
-                </div>
- 
 
-            }
-        </section>
-   </div>
-        </center>
- 
+                <table>
+                    <tr>
+                        <td>
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Gmail-emailcímed" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Jelszavad" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </td>
+                    </tr>
+                </table>
 
-    <div class="col-md-4">
-      
-    </div>
+                <p>
+                    <button type="submit">Bejelentkezés</button>
+                    <button type="submit">Regisztráció</button>
+                    </form>
 </div>
+</center>
+}
+ 
 
