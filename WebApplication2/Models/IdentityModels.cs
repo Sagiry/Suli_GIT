@@ -16,6 +16,21 @@ namespace WebApplication2.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string OMCode { get; set; }
+
+        public string BirthDate { get; set; }
+
+        public string Sex { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string Surname { get; set; }
+
+        public string FName { get; set; }
+
+        public string LName { get; set; }
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
